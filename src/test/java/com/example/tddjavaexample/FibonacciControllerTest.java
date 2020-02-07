@@ -60,6 +60,10 @@ public class FibonacciControllerTest {
 		genericTest(45, 1134903170);
 	}
 	
+	@Test(timeout=1000)
+	public void test_fibonacci_50() {
+		genericTest(50, 12586269025);
+	}
 	
 	private void genericTest(int n, int expected) {
 		int result = controller.fibonacci(n);
