@@ -32,4 +32,16 @@ public class FibonacciControllerTest {
 		int result = controller.fibonacci(2);
 		assertEquals("Resultado de F(2) deveria ser = 1", 1, result);
 	}
+	
+	@Test
+	public void test_fibonacci_3() {
+		int result = controller.fibonacci(3);
+		assertEquals("Resultado de F(3) deveria ser = 2", 2, result);
+	}
+	
+	@Test
+	public void test_fibonacci_4() {
+		int result = controller.fibonacci(4);
+		assertEquals("Resultado de F(4) deveria ser = 3", 3, result);
+	}
 }
