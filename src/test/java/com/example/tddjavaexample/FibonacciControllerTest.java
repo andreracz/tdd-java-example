@@ -72,6 +72,15 @@ public class FibonacciControllerTest {
 		genericTest(new BigInteger("100"),  new BigInteger("354224848179261915075"));
 	}
 	
+	@Test(timeout=1000)
+	public void test_fibonacci_300() {
+		genericTest(new BigInteger("300"),  new BigInteger("222232244629420445529739893461909967206666939096499764990979600"));
+	}
+
+	@Test(timeout=1000)
+	public void test_fibonacci_500() {
+		genericTest(new BigInteger("500"),  new BigInteger("139423224561697880139724382870407283950070256587697307264108962948325571622863290691557658876222521294125"));
+	}
 	private void genericTest(long n, long expected) {
 		genericTest(new BigInteger("" + n), new BigInteger("" + expected));
 	}
