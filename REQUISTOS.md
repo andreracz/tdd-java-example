@@ -19,6 +19,7 @@ A sequencia de Fibonacci é tal que:
 * F(30)= 832040
 * F(45) = 1134903170 
 * F(50) = 12586269025 
+* F(100) = 354224848179261915075
 
 ## Requisitos não funcionais:
 
