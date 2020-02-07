@@ -1,11 +1,14 @@
 package com.example.tddjavaexample;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class FibonacciController {
 
-	public long fibonacci(long n) {
+	@GetMapping("/fibonacci/{n}")
+	public long fibonacci(@PathVariable(value="n") long n) {
 		long a = 0;
 		long b = 1;
 		long c = 0;
