@@ -15,50 +15,51 @@ public class FibonacciControllerTest {
 	@Autowired
 	FibonacciController controller;
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_0() {
 		genericTest(0, 0);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_1() {
 		genericTest(1, 1);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_2() {
 		genericTest(2, 1);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_3() {
 		genericTest(3, 2);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_4() {
 		genericTest(4, 3);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_5() {
 		genericTest(5, 5);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_10() {
 		genericTest(10, 55);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_30() {
 		genericTest(30, 832040);
 	}
 	
-	@Test
+	@Test(timeout=1000)
 	public void test_fibonacci_45() {
 		genericTest(45, 1134903170);
 	}
+	
 	
 	private void genericTest(int n, int expected) {
 		int result = controller.fibonacci(n);
