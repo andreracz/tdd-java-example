@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class FibonacciController {
 
-	public int fibonacci(int n) {
-		int a = 0;
-		int b = 1;
-		int c = 0;
+	public long fibonacci(long n) {
+		long a = 0;
+		long b = 1;
+		long c = 0;
 		if (n == 0) {
 			return a;
 		}
-		for (int i = 2; i <= n; i++) {
+		for (long i = 2; i <= n; i++) {
 			c = a + b;
 			a = b;
 			b = c;
