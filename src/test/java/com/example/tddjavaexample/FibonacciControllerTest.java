@@ -2,6 +2,8 @@ package com.example.tddjavaexample;
 
 import static org.junit.Assert.*;
 
+import java.math.BigInteger;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,11 +69,15 @@ public class FibonacciControllerTest {
 	
 	@Test(timeout=1000)
 	public void test_fibonacci_100() {
-		genericTest(100, 354224848179261915075l);
+		genericTest(new BigInteger("100"),  new BigInteger("354224848179261915075"));
 	}
 	
 	private void genericTest(long n, long expected) {
-		long result = controller.fibonacci(n);
+		genericTest(new BigInteger("" + n), new BigInteger("" + expected));
+	}
+	
+	private void genericTest(BigInteger n, BigInteger expected) {
+		BigInteger result = controller.fibonacci(n);
 		assertEquals("Resultado de F(" + n +") deveria ser = " + expected, expected, result);
 	}
 }
