@@ -17,31 +17,31 @@ public class FibonacciControllerTest {
 	
 	@Test
 	public void test_fibonacci_0() {
-		int result = controller.fibonacci(0);
-		assertEquals("Resultado de F(0) deveria ser = 0",0, result);
+		genericTest(0, 0);
 	}
 	
 	@Test
 	public void test_fibonacci_1() {
-		int result = controller.fibonacci(1);
-		assertEquals("Resultado de F(1) deveria ser = 1", 1, result);
+		genericTest(1, 1);
 	}
 	
 	@Test
 	public void test_fibonacci_2() {
-		int result = controller.fibonacci(2);
-		assertEquals("Resultado de F(2) deveria ser = 1", 1, result);
+		genericTest(2, 1);
 	}
 	
 	@Test
 	public void test_fibonacci_3() {
-		int result = controller.fibonacci(3);
-		assertEquals("Resultado de F(3) deveria ser = 2", 2, result);
+		genericTest(3, 2);
 	}
 	
 	@Test
 	public void test_fibonacci_4() {
-		int result = controller.fibonacci(4);
-		assertEquals("Resultado de F(4) deveria ser = 3", 3, result);
+		genericTest(4, 3);
+	}
+	
+	public void genericTest(int n, int expected) {
+		int result = controller.fibonacci(n);
+		assertEquals("Resultado de F(" + n +") deveria ser = " + expected, expected, result);
 	}
 }
