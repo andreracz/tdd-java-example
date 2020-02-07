@@ -40,7 +40,22 @@ public class FibonacciControllerTest {
 		genericTest(4, 3);
 	}
 	
-	public void genericTest(int n, int expected) {
+	@Test
+	public void test_fibonacci_5() {
+		genericTest(5, 5);
+	}
+	
+	@Test
+	public void test_fibonacci_10() {
+		genericTest(10, 55);
+	}
+	
+	@Test
+	public void test_fibonacci_30() {
+		genericTest(30, 832040);
+	}
+	
+	private void genericTest(int n, int expected) {
 		int result = controller.fibonacci(n);
 		assertEquals("Resultado de F(" + n +") deveria ser = " + expected, expected, result);
 	}
