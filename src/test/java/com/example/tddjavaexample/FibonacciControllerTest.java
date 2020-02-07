@@ -20,4 +20,10 @@ public class FibonacciControllerTest {
 		int result = controller.fibonacci(0);
 		assertEquals("Resultado de F(0) deveria ser = 0",0, result);
 	}
+	
+	@Test
+	public void test_fibonacci_1() {
+		int result = controller.fibonacci(1);
+		assertEquals("Resultado de F(1) deveria ser = 1", 1, result);
+	}
 }
