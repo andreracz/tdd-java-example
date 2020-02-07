@@ -65,6 +65,11 @@ public class FibonacciControllerTest {
 		genericTest(50, 12586269025l);
 	}
 	
+	@Test(timeout=1000)
+	public void test_fibonacci_100() {
+		genericTest(100, 354224848179261915075l);
+	}
+	
 	private void genericTest(long n, long expected) {
 		long result = controller.fibonacci(n);
 		assertEquals("Resultado de F(" + n +") deveria ser = " + expected, expected, result);
